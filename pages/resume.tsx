@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import Head from "next/head";
+import { fadein_up, routeAnimation } from "../animations";
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
-
 const Resume = () => {
   return (
     <div className="px-6 py-2">
@@ -10,8 +11,14 @@ const Resume = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       {/* //! Education & Experience */}
-      <div className="grid gap-6 md:grid-cols-2">
-        <div>
+      <motion.div
+        variants={routeAnimation}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="grid gap-6 md:grid-cols-2"
+      >
+        <motion.div variants={fadein_up} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">Education</h5>
           <div className="">
             <h5 className="my-2 text-xl font-bold">
@@ -23,16 +30,16 @@ const Resume = () => {
               from Academy of Technology
             </p>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={fadein_up} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">Experience</h5>
           <div className="">
             <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
             <p className="font-semibold">Tata Consultancy Services</p>
             <p className="my-3">I don't know why I am doing this job</p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/*Languages & Tools */}
       <div className="grid gap-9 md:grid-cols-2">

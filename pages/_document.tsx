@@ -20,7 +20,7 @@ class MyDocument extends Document {
           />
         </Head>
 
-        <body className="bg-fixed bg-gradient-to-r from-green to-blue-500 dark:from-dark-500 dark:to-dark-700 dark:text-white">
+        <body className="bg-fixed bg-gradient-to-r from-green to-blue-300 dark:from-dark-500 dark:to-dark-700 dark:text-white">
           <Main />
           <NextScript />
         </body>
